@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Become a Responder | ResQ</title>
+
+    <link rel="stylesheet" href="css/responder.css">
+</head>
+
+<body>
+
+    <div class="responder-auth">
+
+        <!-- LEFT BRAND PANEL -->
+
+        <div class="responder-brand">
+
+            <div class="responder-logo">
+                🚨 ResQ
+            </div>
+
+            <span>
+                JOIN THE RESPONDER NETWORK
+            </span>
+
+            <h1>
+                Be there when<br>
+                someone <strong>needs help.</strong>
+            </h1>
+
+            <p>
+                Register as a community responder and help
+                people during emergencies in your area.
+            </p>
+
+            <div class="responder-benefits">
+
+                <div>
+                    <span>✓</span>
+                    <p>Receive nearby emergency requests</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Help people in your community</p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p>Build a verified responder profile</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- REGISTRATION PANEL -->
+
+        <div class="responder-login-box">
+
+            <div class="mobile-responder-logo">
+                🚨 ResQ
+            </div>
+
+            <span class="responder-label">
+                RESPONDER REGISTRATION
+            </span>
+
+            <h2>
+                Become a Responder
+            </h2>
+
+            <p>
+                Create your responder account to join the
+                ResQ emergency assistance network.
+            </p>
+
+
+            <form id="responderRegisterForm">
+
+                <!-- NAME -->
+
+                <div class="responder-form-group">
+
+                    <label for="responderName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="responderName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="responder-form-group">
+
+                    <label for="responderEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="responderEmail"
+                        placeholder="responder@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="responder-form-group">
+
+                    <label for="responderPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="responderPhone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="responder-form-group">
+
+                    <label for="responderPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="responderPassword"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="responder-form-group">
+
+                    <label for="responderConfirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="responderConfirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- HELP TYPES -->
+
+                <div class="responder-form-group">
+
+                    <label>
+                        Assistance You Can Provide
+                    </label>
+
+                    <div class="responder-help-options">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="first_aid"
+                            >
+                            First Aid
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="transport"
+                            >
+                            Transport
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="blood"
+                            >
+                            Blood
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="medicine"
+                            >
+                            Medicine
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="shelter"
+                            >
+                            Shelter
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="helpType"
+                                value="other"
+                            >
+                            Other
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="responder-location-box">
+
+                    <strong>
+                        📍 Location
+                    </strong>
+
+                    <p>
+                        Your location will be requested after
+                        registration so nearby emergencies can
+                        be matched to you.
+                    </p>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit">
+                    Create Responder Account
+                </button>
+
+
+                <div id="responderRegisterMessage"></div>
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+
+            <div class="responder-register-link">
+
+                <span>
+                    Already have a responder account?
+                </span>
+
+                <a href="/responder/login.html">
+                    Login as Responder →
+                </a>
+
+            </div>
+
+
+            <!-- BACK -->
+
+            <a
+                href="/frontend/login-options.html"
+                class="back-link"
+            >
+                ← Choose another login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

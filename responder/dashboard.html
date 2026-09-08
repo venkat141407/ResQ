@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Responder Dashboard | ResQ</title>
+
+    <link
+        rel="stylesheet"
+        href="css/responder.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="responder-nav">
+
+
+    <div class="responder-logo">
+
+        🚨 ResQ
+
+        <span>
+            RESPONDER
+        </span>
+
+    </div>
+
+
+    <nav>
+
+
+        <a
+            href="dashboard.html"
+            class="active"
+        >
+            Dashboard
+        </a>
+
+
+        <a href="emergency.html">
+            Emergencies
+        </a>
+
+
+        <a href="notifications.html">
+
+            🔔 Notifications
+
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+
+        </a>
+
+
+        <button id="responderLogout">
+            Logout
+        </button>
+
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="responder-container">
+
+
+    <!-- ==========================================
+         WELCOME
+         ========================================== -->
+
+    <section class="responder-welcome">
+
+
+        <div>
+
+
+            <span class="responder-label">
+                RESPONDER NETWORK
+            </span>
+
+
+            <h1>
+                Ready to <strong>help.</strong>
+            </h1>
+
+
+            <p>
+                View emergency requests and respond to people
+                who need assistance nearby.
+            </p>
+
+
+        </div>
+
+
+        <div class="availability-card">
+
+
+            <span class="availability-dot"></span>
+
+
+            <span id="availabilityText">
+                Available
+            </span>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STATS
+         ========================================== -->
+
+    <section class="responder-stats">
+
+
+        <div class="responder-stat">
+
+            <span>
+                ACTIVE REQUESTS
+            </span>
+
+
+            <strong id="activeRequests">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="responder-stat">
+
+            <span>
+                COMPLETED
+            </span>
+
+
+            <strong id="completedRequests">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="responder-stat">
+
+            <span>
+                RATING
+            </span>
+
+
+            <strong id="responderRating">
+                5.0 ⭐
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         EMERGENCY REQUEST HEADER
+         ========================================== -->
+
+    <section class="responder-section-header">
+
+
+        <div>
+
+
+            <span class="responder-label">
+                NEARBY ASSISTANCE
+            </span>
+
+
+            <h2>
+                Emergency Requests
+            </h2>
+
+
+        </div>
+
+
+        <a
+            href="emergency.html"
+            class="responder-outline-button"
+        >
+            View All →
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         EMERGENCY REQUESTS
+         ========================================== -->
+
+    <section
+        id="responderEmergencyList"
+        class="responder-emergency-list"
+    >
+
+
+        <div class="responder-empty-card">
+
+
+            <div>
+                🆘
+            </div>
+
+
+            <h3>
+                No active requests
+            </h3>
+
+
+            <p>
+                New emergency requests matching your assistance
+                type will appear here.
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         RESPONDER INFORMATION
+         ========================================== -->
+
+    <section class="responder-info">
+
+
+        <div>
+
+
+            <span class="responder-label">
+                YOUR ROLE
+            </span>
+
+
+            <h2>
+                Every minute<br>
+                can make a difference.
+            </h2>
+
+
+        </div>
+
+
+        <p>
+            ResQ connects verified community responders with
+            people who need immediate assistance nearby.
+        </p>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ============================================
+     RESPONDER JAVASCRIPT
+     ============================================ -->
+
+<script src="js/responder.js"></script>
+
+
+</body>
+
+</html>

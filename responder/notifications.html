@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Notifications | ResQ Responder</title>
+
+    <link
+        rel="stylesheet"
+        href="css/responder.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="responder-nav">
+
+    <div class="responder-logo">
+        🚨 ResQ
+        <span>RESPONDER</span>
+    </div>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+
+        <a
+            href="notifications.html"
+            class="active"
+        >
+            🔔 Notifications
+
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+
+        </a>
+
+
+        <button id="responderLogout">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<main class="responder-container">
+
+
+    <!-- HEADER -->
+
+    <section class="responder-welcome">
+
+        <div>
+
+            <span class="responder-label">
+                RESPONDER CENTER
+            </span>
+
+
+            <h1>
+                Your <span>Notifications</span>
+            </h1>
+
+
+            <p>
+                Stay updated about emergency assignments
+                and response activity.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TOOLBAR -->
+
+    <section class="dashboard-card notification-toolbar">
+
+        <div>
+
+            <span class="section-label">
+                ACTIVITY
+            </span>
+
+
+            <h3 id="notificationSummary">
+                Loading notifications...
+            </h3>
+
+        </div>
+
+
+        <button
+            id="markAllReadBtn"
+            class="secondary-button"
+        >
+            ✓ Mark All as Read
+        </button>
+
+    </section>
+
+
+
+    <!-- NOTIFICATIONS -->
+
+    <section
+        id="notificationList"
+        class="notification-list"
+    >
+
+        <div class="dashboard-card loading-card">
+
+            <div class="card-icon">
+                🔔
+            </div>
+
+
+            <h3>
+                Loading notifications...
+            </h3>
+
+
+            <p>
+                Loading your responder activity.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="js/notifications.js"></script>
+
+</body>
+
+</html>

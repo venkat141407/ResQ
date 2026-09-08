@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Emergency Requests | ResQ Responder
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/responder.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="responder-nav">
+
+    <div class="responder-logo">
+
+        🚨 ResQ
+
+        <span>
+            RESPONDER
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a
+            href="emergency.html"
+            class="active"
+        >
+            Emergencies
+        </a>
+
+        <a href="notifications.html">
+
+            🔔 Notifications
+
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+
+        </a>
+
+
+        <button id="responderLogout">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<main class="responder-container">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <section class="responder-welcome">
+
+        <div>
+
+            <span class="responder-label">
+                EMERGENCY CENTER
+            </span>
+
+            <h1>
+                Nearby
+                <strong>requests.</strong>
+            </h1>
+
+            <p>
+                Review emergencies that match
+                your verified responder capabilities.
+            </p>
+
+        </div>
+
+
+        <div class="availability-card">
+
+            <span class="availability-dot"></span>
+
+            Responder Network Active
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EMERGENCY LIST
+    ====================================================== -->
+
+    <section>
+
+        <div class="responder-section-header">
+
+            <div>
+
+                <span class="responder-label">
+                    RESPONSE QUEUE
+                </span>
+
+                <h2>
+                    Emergency Requests
+                </h2>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="responder-outline-button"
+            >
+                ← Dashboard
+            </a>
+
+        </div>
+
+
+        <section
+            id="responderEmergencyList"
+            class="responder-emergency-list"
+        >
+
+            <div
+                class="responder-empty-card"
+            >
+
+                <div>
+                    🆘
+                </div>
+
+                <h3>
+                    Loading requests...
+                </h3>
+
+                <p>
+                    Checking for nearby emergencies.
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INFORMATION
+    ====================================================== -->
+
+    <section class="responder-info">
+
+        <div>
+
+            <span class="responder-label">
+                RESPONDER SAFETY
+            </span>
+
+            <h2>
+                Respond responsibly.
+            </h2>
+
+        </div>
+
+
+        <p>
+            ResQ is a community assistance prototype.
+            Only respond when you are able to safely
+            provide the requested assistance.
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<script
+    src="js/responder.js"
+></script>
+
+
+</body>
+
+</html>
