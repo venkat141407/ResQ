@@ -104,8 +104,7 @@ app.use(
  * └── js/
  */
 
-const projectRoot =
-    __dirname;
+const projectRoot = path.join(__dirname, "..");
 
 
 app.use(
