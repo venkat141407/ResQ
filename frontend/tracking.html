@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Track Emergency | ResQ
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="history.html">
+            My Requests
+        </a>
+
+        <a href="notifications.html">
+            🔔 Notifications
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="welcome-section">
+
+        <div>
+
+            <span class="section-label">
+                LIVE EMERGENCY
+            </span>
+
+            <h1>
+                Track your
+                <span>assistance.</span>
+            </h1>
+
+            <p>
+                Follow the current status of your ResQ
+                emergency and assigned responder.
+            </p>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-dot"></span>
+
+            ResQ Network Active
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LIVE STATUS
+    ====================================================== -->
+
+    <section
+        id="liveStatusMessage"
+        class="live-status-message"
+    >
+
+        Loading emergency status...
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATUS CARD
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="history-top">
+
+            <div>
+
+                <span
+                    id="emergencyType"
+                    class="section-label"
+                >
+                    Emergency
+                </span>
+
+                <h2>
+                    Current Emergency
+                </h2>
+
+            </div>
+
+            <span
+                id="emergencyStatus"
+                class="status-badge pending"
+            >
+                LOADING
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROGRESS
+        ================================================== -->
+
+        <div class="tracking-progress">
+
+            <div class="progress-step active">
+
+                <div class="progress-icon">
+                    ✓
+                </div>
+
+                <span>
+                    Reported
+                </span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-icon">
+                    2
+                </div>
+
+                <span>
+                    Matched
+                </span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-icon">
+                    3
+                </div>
+
+                <span>
+                    Responding
+                </span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-icon">
+                    4
+                </div>
+
+                <span>
+                    Resolved
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EMERGENCY DETAILS
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-label">
+            EMERGENCY DETAILS
+        </div>
+
+
+        <div class="history-details">
+
+
+            <div>
+
+                <small>
+                    DESCRIPTION
+                </small>
+
+                <strong
+                    id="emergencyDescription"
+                >
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    PRIORITY
+                </small>
+
+                <strong
+                    id="emergencyPriority"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    REPORTED
+                </small>
+
+                <strong
+                    id="emergencyTime"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    LOCATION
+                </small>
+
+                <strong
+                    id="emergencyLocation"
+                >
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REAL MAP
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-label">
+                    LIVE LOCATION
+                </span>
+
+                <h2>
+                    Emergency Map
+                </h2>
+
+            </div>
+
+            <a
+                id="openMapBtn"
+                class="secondary-button"
+                href="#"
+                target="_blank"
+            >
+                🗺️ Open Navigation
+            </a>
+
+        </div>
+
+
+        <div
+            id="resqMap"
+            class="resq-map"
+        ></div>
+
+
+        <div
+            id="mapLegend"
+            class="map-legend"
+        >
+
+            <div>
+
+                <span
+                    class="legend-dot emergency-dot"
+                ></span>
+
+                Emergency Location
+
+            </div>
+
+
+            <div>
+
+                <span
+                    class="legend-dot responder-dot"
+                ></span>
+
+                Responder Location
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESPONDER
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-label">
+            RESPONDER
+        </div>
+
+
+        <div id="responderInfo">
+
+            <div class="responder-empty">
+
+                <div class="card-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Looking for a responder
+                </h3>
+
+                <p>
+                    ResQ is searching for a nearby
+                    verified community responder.
+                </p>
+
+                <div class="tracking-pulse">
+                    Searching nearby...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Last responder GPS update -->
+
+        <p
+            id="responderLocationTime"
+            class="responder-location-time"
+        >
+            Waiting for responder location...
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EMERGENCY ACTIONS
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-label">
+            EMERGENCY ACTIONS
+        </div>
+
+
+        <div class="tracking-actions">
+
+            <a
+                id="openMapBtnBottom"
+                class="secondary-button"
+                href="#"
+                target="_blank"
+            >
+                🗺️ Open Navigation
+            </a>
+
+
+            <button
+                id="cancelEmergencyBtn"
+                class="danger-button"
+            >
+                ✕ Cancel Emergency
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SAFETY NOTICE
+    ====================================================== -->
+
+    <section class="dashboard-card history-notice">
+
+        <div class="notice-icon">
+            ℹ️
+        </div>
+
+
+        <div>
+
+            <strong>
+                ResQ safety notice
+            </strong>
+
+            <p>
+                ResQ is a community assistance prototype
+                and does not replace official emergency
+                services. For life-threatening situations,
+                contact your local emergency services
+                immediately.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     LEAFLET JS
+========================================================= -->
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+
+<!-- =========================================================
+     TRACKING JS
+========================================================= -->
+
+<script
+    src="../js/tracking.js"
+></script>
+
+</body>
+
+</html>

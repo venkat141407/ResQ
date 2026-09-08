@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | ResQ</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="history.html">My Requests</a>
+        <a href="profile.html">Profile</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="welcome-section">
+
+        <div>
+            <span class="section-label">RESQ NETWORK</span>
+
+            <h1>
+                Welcome back, <span id="userName">User</span>.
+            </h1>
+
+            <p>
+                Get the help you need or become the help someone nearby needs.
+            </p>
+        </div>
+
+        <div class="status-card">
+            <span class="status-dot"></span>
+            ResQ Network Active
+        </div>
+
+    </section>
+
+
+    <section class="emergency-banner">
+
+        <div class="emergency-icon">
+            🚨
+        </div>
+
+        <div class="emergency-text">
+            <h2>Need emergency assistance?</h2>
+
+            <p>
+                Report your situation and ResQ will help identify
+                nearby verified responders.
+            </p>
+        </div>
+
+        <a href="emergency.html" class="emergency-button">
+            Report Emergency
+        </a>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                🆘
+            </div>
+
+            <h3>Request Help</h3>
+
+            <p>
+                Find nearby community helpers who can provide
+                first aid, transport, medicine and more.
+            </p>
+
+            <a href="help.html" class="card-link">
+                Find Help →
+            </a>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                📋
+            </div>
+
+            <h3>My Requests</h3>
+
+            <p>
+                View your emergency reports and track their
+                current status.
+            </p>
+
+            <a href="history.html" class="card-link">
+                View Requests →
+            </a>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                📍
+            </div>
+
+            <h3>Location Services</h3>
+
+            <p>
+                ResQ uses your location to find assistance
+                available nearby.
+            </p>
+
+            <span class="location-status">
+                Location ready
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="info-section">
+
+        <div>
+            <span class="section-label">HOW IT WORKS</span>
+
+            <h2>
+                One request.<br>
+                The right help.
+            </h2>
+        </div>
+
+        <div class="mini-steps">
+
+            <div>
+                <strong>01</strong>
+                <span>Report</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Match</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Respond</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

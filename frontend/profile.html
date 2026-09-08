@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | ResQ</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="history.html">
+            My Requests
+        </a>
+
+        <a href="notifications.html">
+            🔔 Notifications
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+        </a>
+
+        <a
+            href="profile.html"
+            class="active"
+        >
+            Profile
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <!-- =====================================================
+         PROFILE HEADER
+         ===================================================== -->
+
+    <section class="welcome-section">
+
+        <div>
+
+            <span class="section-label">
+                ACCOUNT
+            </span>
+
+            <h1>
+                Your <span>Profile</span>
+            </h1>
+
+            <p>
+                Manage your ResQ account and trusted
+                emergency contacts.
+            </p>
+
+        </div>
+
+        <div class="status-card">
+
+            <span class="status-dot"></span>
+
+            ResQ Network Active
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PERSONAL INFORMATION
+         ===================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-label">
+                    PERSONAL INFORMATION
+                </span>
+
+                <h2>
+                    Account Details
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-details-grid">
+
+            <div class="profile-detail">
+
+                <small>
+                    FULL NAME
+                </small>
+
+                <strong id="profileName">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div class="profile-detail">
+
+                <small>
+                    EMAIL
+                </small>
+
+                <strong id="profileEmail">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div class="profile-detail">
+
+                <small>
+                    PHONE
+                </small>
+
+                <strong id="profilePhone">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div class="profile-detail">
+
+                <small>
+                    ACCOUNT TYPE
+                </small>
+
+                <strong id="profileRole">
+                    User
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EMERGENCY CONTACTS
+         ===================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-label">
+                    SAFETY
+                </span>
+
+                <h2>
+                    Emergency Contacts
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="profile-description">
+            Add trusted people who can be contacted
+            when you need assistance.
+        </p>
+
+
+        <div
+            id="contactsList"
+            class="contacts-list"
+        >
+        </div>
+
+
+        <button
+            id="addContactBtn"
+            class="secondary-button"
+            type="button"
+        >
+            + Add Emergency Contact
+        </button>
+
+
+        <div
+            id="contactForm"
+            class="contact-form"
+            style="display: none;"
+        >
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label for="contactName">
+                        Contact Name
+                    </label>
+
+                    <input
+                        id="contactName"
+                        type="text"
+                        maxlength="100"
+                        placeholder="e.g. Mother"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="contactPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        id="contactPhone"
+                        type="tel"
+                        maxlength="30"
+                        placeholder="e.g. 9876543210"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="contactRelation">
+                        Relation
+                    </label>
+
+                    <input
+                        id="contactRelation"
+                        type="text"
+                        maxlength="50"
+                        placeholder="e.g. Parent"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form-actions">
+
+                <button
+                    id="saveContactBtn"
+                    class="primary-button"
+                    type="button"
+                >
+                    Save Contact
+                </button>
+
+                <button
+                    id="cancelContactBtn"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p
+            id="profileMessage"
+            class="profile-message"
+        ></p>
+
+    </section>
+
+
+    <!-- =====================================================
+         SAFETY NOTICE
+         ===================================================== -->
+
+    <section class="dashboard-card history-notice">
+
+        <div class="notice-icon">
+            ℹ️
+        </div>
+
+        <div>
+
+            <strong>
+                ResQ safety notice
+            </strong>
+
+            <p>
+                ResQ is a community assistance prototype
+                and does not replace official emergency
+                services. For life-threatening situations,
+                contact your local emergency services
+                immediately.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/profile.js"></script>
+
+</body>
+
+</html>

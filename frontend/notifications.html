@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Notifications | ResQ</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+
+        <a href="history.html">
+            My Requests
+        </a>
+
+
+        <a
+            href="notifications.html"
+            class="active"
+        >
+            🔔 Notifications
+
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >
+                0
+            </span>
+
+        </a>
+
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<main class="dashboard-container">
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <section class="welcome-section">
+
+        <div>
+
+            <span class="section-label">
+                NOTIFICATIONS
+            </span>
+
+
+            <h1>
+                Your <span>Notifications</span>
+            </h1>
+
+
+            <p>
+                Stay updated about your emergencies,
+                responder matches and response progress.
+            </p>
+
+        </div>
+
+
+        <div class="status-card">
+
+            <span class="status-dot"></span>
+
+            ResQ Network Active
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         NOTIFICATION TOOLBAR
+         ========================================== -->
+
+    <section class="dashboard-card notification-toolbar">
+
+        <div>
+
+            <span class="section-label">
+                ACTIVITY
+            </span>
+
+
+            <h3 id="notificationSummary">
+                Loading notifications...
+            </h3>
+
+        </div>
+
+
+        <button
+            id="markAllReadBtn"
+            class="secondary-button"
+        >
+            ✓ Mark All as Read
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         NOTIFICATIONS
+         ========================================== -->
+
+    <section
+        id="notificationList"
+        class="notification-list"
+    >
+
+        <div class="dashboard-card loading-card">
+
+            <div class="card-icon">
+                🔔
+            </div>
+
+
+            <h3>
+                Loading notifications...
+            </h3>
+
+
+            <p>
+                Please wait while we load your
+                latest ResQ activity.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         SAFETY NOTICE
+         ========================================== -->
+
+    <section class="dashboard-card history-notice">
+
+        <div class="notice-icon">
+            ℹ️
+        </div>
+
+
+        <div>
+
+            <strong>
+                ResQ safety notice
+            </strong>
+
+
+            <p>
+                ResQ is a community assistance prototype
+                and does not replace official emergency services.
+                For life-threatening situations, contact your
+                local emergency services immediately.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="../js/notifications.js"></script>
+
+
+</body>
+
+</html>

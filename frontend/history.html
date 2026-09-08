@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Requests | ResQ</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a
+            href="history.html"
+            class="active"
+        >
+            My Requests
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <!-- PAGE HEADER -->
+
+    <section class="welcome-section">
+
+        <div>
+
+            <span class="section-label">
+                EMERGENCY HISTORY
+            </span>
+
+            <h1>
+                My <span>Requests</span>
+            </h1>
+
+            <p>
+                Track emergencies you have reported
+                through the ResQ network.
+            </p>
+
+        </div>
+
+
+        <a
+            href="emergency.html"
+            class="emergency-button"
+        >
+            + New Emergency
+        </a>
+
+    </section>
+
+
+    <!-- REQUEST SUMMARY -->
+
+    <section class="dashboard-grid history-summary">
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                🚨
+            </div>
+
+            <small>
+                TOTAL REQUESTS
+            </small>
+
+            <h2 id="totalRequests">
+                —
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                🔴
+            </div>
+
+            <small>
+                ACTIVE REQUESTS
+            </small>
+
+            <h2 id="activeRequests">
+                —
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">
+                ✅
+            </div>
+
+            <small>
+                RESOLVED
+            </small>
+
+            <h2 id="resolvedRequests">
+                —
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- REQUEST LIST -->
+
+    <section class="history-section">
+
+        <div class="history-section-header">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ACTIVITY
+                </span>
+
+                <h2>
+                    Emergency Reports
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="emergencyList"
+            class="history-list"
+        >
+
+            <div class="dashboard-card loading-card">
+
+                <div class="card-icon">
+                    ⏳
+                </div>
+
+                <h3>
+                    Loading your requests...
+                </h3>
+
+                <p>
+                    Fetching your emergency history
+                    from the ResQ network.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAFETY NOTICE -->
+
+    <section class="dashboard-card history-notice">
+
+        <div class="notice-icon">
+            ℹ️
+        </div>
+
+        <div>
+
+            <strong>
+                ResQ safety notice
+            </strong>
+
+            <p>
+                ResQ is a community assistance prototype.
+                For life-threatening emergencies, always
+                contact your local official emergency services.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/history.js"></script>
+
+</body>
+
+</html>

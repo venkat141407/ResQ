@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Request Help | ResQ</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="history.html">
+            My Requests
+        </a>
+
+        <a href="notifications.html">
+            🔔 Notifications
+            <span
+                id="notificationNavCount"
+                class="notification-nav-count"
+            >0</span>
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="welcome-section">
+
+        <div>
+            <span class="section-label">
+                COMMUNITY ASSISTANCE
+            </span>
+
+            <h1>
+                Request
+                <span>help.</span>
+            </h1>
+
+            <p>
+                Tell us what assistance you need and
+                ResQ will look for a nearby verified responder.
+            </p>
+        </div>
+
+        <div class="status-card">
+            <span class="status-dot"></span>
+            ResQ Network Active
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-card">
+
+        <div class="section-label">
+            HELP REQUEST
+        </div>
+
+        <h2>
+            What do you need?
+        </h2>
+
+        <p class="form-description">
+            Select the type of assistance required.
+            Your request will be matched with available
+            verified responders nearby.
+        </p>
+
+
+        <div
+            id="helpMessage"
+            class="profile-message"
+            style="display:none;"
+        ></div>
+
+
+        <form id="helpRequestForm">
+
+            <div class="help-type-grid">
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="first_aid"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            🩹
+                        </span>
+
+                        <strong>
+                            First Aid
+                        </strong>
+
+                        <small>
+                            Basic medical assistance
+                        </small>
+                    </span>
+                </label>
+
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="transport"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            🚗
+                        </span>
+
+                        <strong>
+                            Transport
+                        </strong>
+
+                        <small>
+                            Help reaching a safe location
+                        </small>
+                    </span>
+                </label>
+
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="blood"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            🩸
+                        </span>
+
+                        <strong>
+                            Blood
+                        </strong>
+
+                        <small>
+                            Blood donation assistance
+                        </small>
+                    </span>
+                </label>
+
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="medicine"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            💊
+                        </span>
+
+                        <strong>
+                            Medicine
+                        </strong>
+
+                        <small>
+                            Medicine pickup or delivery
+                        </small>
+                    </span>
+                </label>
+
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="shelter"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            🏠
+                        </span>
+
+                        <strong>
+                            Shelter
+                        </strong>
+
+                        <small>
+                            Temporary safe place
+                        </small>
+                    </span>
+                </label>
+
+
+                <label class="help-type-option">
+                    <input
+                        type="radio"
+                        name="helpType"
+                        value="other"
+                    >
+
+                    <span class="help-type-card">
+                        <span class="help-type-icon">
+                            🤝
+                        </span>
+
+                        <strong>
+                            Other Help
+                        </strong>
+
+                        <small>
+                            Other community assistance
+                        </small>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <div class="help-location-card">
+
+                <div class="help-location-icon">
+                    📍
+                </div>
+
+                <div class="help-location-content">
+
+                    <strong>
+                        Your emergency location
+                    </strong>
+
+                    <p id="helpLocationText">
+                        We will use the location
+                        attached to your active emergency.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="help-form-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="secondary-button"
+                >
+                    ← Back
+                </a>
+
+                <button
+                    type="submit"
+                    id="helpSubmitBtn"
+                    class="primary-button"
+                >
+                    Find Nearby Help →
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <section
+        id="matchingSection"
+        class="dashboard-card"
+        style="display:none;"
+    >
+
+        <div class="section-label">
+            MATCHING
+        </div>
+
+        <div class="help-matching-state">
+
+            <div class="matching-spinner"></div>
+
+            <h2>
+                Finding nearby help
+            </h2>
+
+            <p id="matchingMessage">
+                ResQ is searching for verified responders
+                who can provide the selected assistance.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-card history-notice">
+
+        <div class="notice-icon">
+            ℹ️
+        </div>
+
+        <div>
+
+            <strong>
+                ResQ safety notice
+            </strong>
+
+            <p>
+                ResQ is a community assistance prototype
+                and does not replace official emergency
+                services. For life-threatening situations,
+                contact your local emergency services
+                immediately.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/help.js"></script>
+
+</body>
+</html>

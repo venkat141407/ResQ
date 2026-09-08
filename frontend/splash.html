@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResQ | Emergency Response</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* =====================================================
+           SPLASH BACKGROUND
+        ===================================================== */
+
+        .splash {
+
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
+            background-image:
+                url("/frontend/assets/resq-intro.png");
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-repeat: no-repeat;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =====================================================
+           DARK CINEMATIC OVERLAY
+        ===================================================== */
+
+        .splash::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.78),
+                    rgba(0, 0, 0, 0.28),
+                    rgba(0, 0, 0, 0.68)
+                );
+
+            z-index: 1;
+
+        }
+
+
+        /* =====================================================
+           EXTRA DARK BOTTOM GRADIENT
+        ===================================================== */
+
+        .splash::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.75),
+                    transparent 55%
+                );
+
+            z-index: 2;
+
+        }
+
+
+        /* =====================================================
+           CENTER CONTENT
+        ===================================================== */
+
+        .content {
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 90%;
+
+            max-width: 850px;
+
+            text-align: center;
+
+            color: white;
+
+            z-index: 3;
+
+            animation:
+                fadeIn 1.2s ease;
+
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .logo {
+
+            font-size:
+                clamp(60px, 10vw, 110px);
+
+            font-weight: 900;
+
+            letter-spacing: -5px;
+
+            line-height: 1;
+
+            text-shadow:
+                0 8px 30px
+                rgba(0, 0, 0, 0.7);
+
+        }
+
+
+        .logo span {
+
+            color: #ed1c24;
+
+        }
+
+
+        /* =====================================================
+           TAGLINE
+        ===================================================== */
+
+        .tagline {
+
+            margin-top: 25px;
+
+            font-size:
+                clamp(13px, 2vw, 21px);
+
+            font-weight: 600;
+
+            letter-spacing: 5px;
+
+            color:
+                rgba(255, 255, 255, 0.95);
+
+        }
+
+
+        .description {
+
+            margin-top: 14px;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            color:
+                rgba(255, 255, 255, 0.72);
+
+        }
+
+
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        .loading {
+
+            width: 250px;
+
+            margin:
+                48px auto 0;
+
+        }
+
+
+        .loading-text {
+
+            margin-bottom: 11px;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color:
+                rgba(255, 255, 255, 0.75);
+
+        }
+
+
+        .loading-track {
+
+            width: 100%;
+
+            height: 3px;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            background:
+                rgba(255, 255, 255, 0.25);
+
+        }
+
+
+        .loading-bar {
+
+            width: 0%;
+
+            height: 100%;
+
+            background: #ed1c24;
+
+            animation:
+                loading 3.7s
+                linear forwards;
+
+        }
+
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes loading {
+
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -45%);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translate(-50%, -50%);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .tagline {
+
+                letter-spacing: 3px;
+
+            }
+
+
+            .description {
+
+                font-size: 12px;
+
+            }
+
+
+            .loading {
+
+                width: 190px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="splash">
+
+
+        <div class="content">
+
+
+            <div class="logo">
+
+                🚨 Res<span>Q</span>
+
+            </div>
+
+
+            <div class="tagline">
+
+                COMMUNITY EMERGENCY RESPONSE
+
+            </div>
+
+
+            <div class="description">
+
+                Help can be closer than you think.
+
+            </div>
+
+
+            <div class="loading">
+
+
+                <div class="loading-text">
+
+                    CONNECTING TO RESQ NETWORK
+
+                </div>
+
+
+                <div class="loading-track">
+
+                    <div class="loading-bar"></div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        setTimeout(function () {
+
+            window.location.href =
+                "/frontend/index.html";
+
+        }, 4200);
+
+    </script>
+
+
+</body>
+
+</html>

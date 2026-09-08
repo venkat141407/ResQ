@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Emergency | ResQ</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">
+        🚨 ResQ
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="history.html">My Requests</a>
+        <a href="profile.html">Profile</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="welcome-section">
+
+        <div>
+            <span class="section-label">EMERGENCY RESPONSE</span>
+
+            <h1>Report an <span>Emergency</span></h1>
+
+            <p>
+                Tell us what happened and share your location.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-card emergency-form-card">
+
+        <form id="emergencyForm">
+
+            <div class="form-group">
+                <label for="type">Emergency Type</label>
+
+                <select id="type" required>
+                    <option value="">Select emergency type</option>
+                    <option value="medical">Medical Emergency</option>
+                    <option value="accident">Accident</option>
+                    <option value="fire">Fire</option>
+                    <option value="crime">Crime / Safety</option>
+                    <option value="blood">Blood Requirement</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">What happened?</label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Briefly describe the emergency..."
+                    required
+                ></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <label for="priority">Priority</label>
+
+                <select id="priority" required>
+                    <option value="high">High</option>
+                    <option value="critical">Critical</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+
+            <div class="location-box">
+
+                <div>
+                    <strong>📍 Your Location</strong>
+
+                    <p id="locationStatus">
+                        Location not detected yet.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="locationBtn"
+                    class="secondary-button"
+                >
+                    Get My Location
+                </button>
+
+            </div>
+
+
+            <input type="hidden" id="latitude">
+            <input type="hidden" id="longitude">
+
+
+            <button
+                type="submit"
+                class="emergency-button submit-emergency"
+            >
+                🚨 Report Emergency
+            </button>
+
+
+            <div id="emergencyMessage"></div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script src="../js/emergency.js"></script>
+
+</body>
+</html>
