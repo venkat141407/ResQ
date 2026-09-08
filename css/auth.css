@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #111827;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* =========================
+   LEFT BRAND PANEL
+========================= */
+
+.auth-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px 8%;
+    background: #111827;
+    color: white;
+    overflow: hidden;
+}
+
+.auth-brand::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    right: -180px;
+    bottom: -180px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.brand-logo {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    padding-bottom: 80px;
+}
+
+.brand-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #fca5a5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.brand-content h1 {
+    font-size: clamp(45px, 5vw, 70px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.brand-content h1 span {
+    color: #ef4444;
+}
+
+.brand-content p {
+    max-width: 480px;
+    margin-top: 25px;
+    color: #9ca3af;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORM PANEL
+========================= */
+
+.auth-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #ffffff;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 430px;
+}
+
+.auth-form h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.auth-button:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+.switch-auth {
+    margin-top: 25px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.switch-auth a {
+    color: #dc2626;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+
+/* =========================
+   FORM MESSAGES
+========================= */
+
+#registerMessage,
+#loginMessage {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand {
+        display: none;
+    }
+
+    .auth-form-container {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .mobile-logo {
+        display: block;
+        margin-bottom: 45px;
+        color: #111827;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .auth-form h2 {
+        font-size: 30px;
+    }
+}

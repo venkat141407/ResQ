@@ -1,0 +1,765 @@
+/* ============================================================
+   RESQ GLOBAL RESPONSIVE SYSTEM
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+
+/* ============================================================
+   LARGE TABLETS / SMALL LAPTOPS
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .dashboard-container {
+        width: 92%;
+        max-width: 1000px;
+    }
+
+    .dashboard-nav {
+        padding: 18px 4%;
+    }
+
+    .dashboard-nav nav {
+        gap: 18px;
+    }
+
+    .dashboard-nav nav a {
+        font-size: 12px;
+    }
+
+    .responder-container {
+        width: 92%;
+        max-width: 1000px;
+    }
+
+    .responder-nav {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .responder-nav nav {
+        gap: 17px;
+    }
+
+    .admin-container {
+        width: 94%;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    /* User navigation */
+
+    .dashboard-nav {
+        min-height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .dashboard-nav nav {
+        gap: 12px;
+    }
+
+    .dashboard-nav nav a {
+        font-size: 11px;
+    }
+
+    .dashboard-nav #logoutBtn {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+
+    /* Dashboard */
+
+    .welcome-section {
+        gap: 25px;
+    }
+
+    .welcome-section h1 {
+        font-size: 35px;
+    }
+
+    .status-card {
+        flex-shrink: 0;
+    }
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* Responder */
+
+    .responder-nav {
+        min-height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .responder-nav nav {
+        gap: 11px;
+    }
+
+    .responder-nav nav a {
+        font-size: 11px;
+    }
+
+    .responder-nav button {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .responder-welcome {
+        gap: 20px;
+    }
+
+    .responder-welcome h1 {
+        font-size: 35px;
+    }
+
+    .responder-stats {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* Admin */
+
+    .admin-layout {
+        grid-template-columns:
+            220px minmax(0, 1fr);
+    }
+
+    .admin-sidebar {
+        width: 220px;
+    }
+
+    .admin-main {
+        padding: 25px;
+    }
+
+    .admin-stat-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    /* ========================================================
+       USER NAVIGATION
+       ======================================================== */
+
+    .dashboard-nav {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 5%;
+    }
+
+    .dashboard-nav .logo {
+        font-size: 19px;
+    }
+
+    .dashboard-nav nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 7px;
+        overflow-x: auto;
+        padding: 3px 0 4px;
+        scrollbar-width: none;
+    }
+
+    .dashboard-nav nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dashboard-nav nav a {
+        flex-shrink: 0;
+        padding: 7px 9px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .dashboard-nav #logoutBtn {
+        flex-shrink: 0;
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+
+    /* ========================================================
+       USER DASHBOARD
+       ======================================================== */
+
+    .dashboard-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0 50px;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .welcome-section h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .welcome-section p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .status-card {
+        width: auto;
+        align-self: flex-start;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+
+    /* ========================================================
+       DASHBOARD SECTIONS
+       ======================================================== */
+
+    .section-header {
+        gap: 13px;
+    }
+
+    .section-header h2 {
+        font-size: 23px;
+    }
+
+    .section-label {
+        font-size: 9px;
+    }
+
+    .card-link {
+        font-size: 12px;
+    }
+
+
+    /* ========================================================
+       HISTORY
+       ======================================================== */
+
+    .history-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+    }
+
+    .history-top {
+        gap: 10px;
+    }
+
+    .history-top h3 {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .history-actions {
+        justify-content: stretch;
+    }
+
+    .history-actions .card-link {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ========================================================
+       TRACKING
+       ======================================================== */
+
+    .tracking-progress {
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+    }
+
+    .tracking-progress::-webkit-scrollbar {
+        display: none;
+    }
+
+    .progress-step {
+        min-width: 62px;
+    }
+
+    .progress-line {
+        min-width: 22px;
+    }
+
+    .resq-map {
+        height: 320px;
+    }
+
+    .tracking-actions {
+        width: 100%;
+    }
+
+    .tracking-actions a,
+    .tracking-actions button {
+        flex: 1 1 auto;
+    }
+
+
+    /* ========================================================
+       NOTIFICATIONS
+       ======================================================== */
+
+    .notification-toolbar {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .notification-toolbar button {
+        width: 100%;
+    }
+
+    .notification-card {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .notification-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .notification-bottom {
+        gap: 9px;
+    }
+
+
+    /* ========================================================
+       USER FORMS
+       ======================================================== */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .location-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .location-row button {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       RESPONDER NAV
+       ======================================================== */
+
+    .responder-nav {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 14px 5%;
+    }
+
+    .responder-logo {
+        font-size: 18px;
+    }
+
+    .responder-logo span {
+        font-size: 8px;
+    }
+
+    .responder-nav nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        overflow-x: auto;
+        padding: 3px 0 4px;
+        scrollbar-width: none;
+    }
+
+    .responder-nav nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .responder-nav nav a {
+        flex-shrink: 0;
+        padding: 7px 9px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .responder-nav button {
+        flex-shrink: 0;
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+
+    /* ========================================================
+       RESPONDER DASHBOARD
+       ======================================================== */
+
+    .responder-container {
+        width: 90%;
+        padding: 30px 0 50px;
+    }
+
+    .responder-welcome {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+    }
+
+    .responder-welcome h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .responder-welcome p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .availability-card {
+        align-self: flex-start;
+    }
+
+    .responder-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .responder-stat {
+        padding: 17px;
+    }
+
+    .responder-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .responder-section-header a {
+        width: 100%;
+    }
+
+    .responder-emergency-card {
+        padding: 17px;
+    }
+
+    .responder-request-meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* ========================================================
+       RESPONDER MODAL
+       ======================================================== */
+
+    .responder-modal-overlay {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .responder-modal {
+        width: 100%;
+        max-height: calc(100vh - 20px);
+        padding: 23px 17px;
+        border-radius: 15px;
+    }
+
+
+    /* ========================================================
+       ADMIN
+       ======================================================== */
+
+    .admin-layout {
+        display: block;
+    }
+
+    .admin-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .admin-sidebar nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 6px;
+        padding: 5px;
+        scrollbar-width: none;
+    }
+
+    .admin-sidebar nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .admin-sidebar nav a {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .admin-main {
+        width: 100%;
+        padding: 22px 5%;
+    }
+
+    .admin-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .admin-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+    /* ========================================================
+       GLOBAL
+       ======================================================== */
+
+    body {
+        font-size: 14px;
+    }
+
+
+    /* ========================================================
+       USER DASHBOARD
+       ======================================================== */
+
+    .dashboard-container {
+        width: 92%;
+        padding-top: 25px;
+    }
+
+    .welcome-section h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-card {
+        padding: 17px;
+    }
+
+    .card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+
+    /* ========================================================
+       HISTORY
+       ======================================================== */
+
+    .history-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ========================================================
+       TRACKING
+       ======================================================== */
+
+    .resq-map {
+        height: 285px;
+    }
+
+    .map-legend {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .tracking-actions {
+        flex-direction: column;
+    }
+
+    .tracking-actions a,
+    .tracking-actions button {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       NOTIFICATIONS
+       ======================================================== */
+
+    .notification-card {
+        flex-direction: column;
+    }
+
+    .notification-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .notification-content {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       RESPONDER
+       ======================================================== */
+
+    .responder-container {
+        width: 92%;
+    }
+
+    .responder-welcome h1 {
+        font-size: 27px;
+    }
+
+    .responder-card-top h3 {
+        font-size: 16px;
+    }
+
+    .responder-request-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .responder-request-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .responder-action-button {
+        width: 100%;
+    }
+
+    .requester-preview {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       RESPONDER MODAL
+       ======================================================== */
+
+    .responder-modal h2 {
+        font-size: 21px;
+        padding-right: 30px;
+    }
+
+    .modal-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-actions a,
+    .modal-actions button {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       BUTTONS
+       ======================================================== */
+
+    .primary-button,
+    .secondary-button,
+    .danger-button {
+        min-height: 42px;
+    }
+}
+
+
+/* ============================================================
+   VERY SMALL DEVICES
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+    .dashboard-nav nav a,
+    .responder-nav nav a {
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 9px;
+    }
+
+    .dashboard-nav #logoutBtn,
+    .responder-nav button {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 9px;
+    }
+
+    .welcome-section h1,
+    .responder-welcome h1 {
+        font-size: 24px;
+    }
+
+    .resq-map {
+        height: 250px;
+    }
+}
