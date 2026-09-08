@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users | ResQ Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="admin-nav">
+
+    <div class="admin-logo">
+        🚨 ResQ <span>ADMIN</span>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="emergencies.html">Emergencies</a>
+        <a href="responders.html">Responders</a>
+        <a href="users.html" class="active">Users</a>
+        <a href="analytics.html">Analytics</a>
+        <button id="adminLogout">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+
+        <div>
+            <span class="admin-label">USER MANAGEMENT</span>
+
+            <h1>
+                ResQ <strong>Users</strong>
+            </h1>
+
+            <p>
+                View registered members of the ResQ community.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="admin-panel">
+
+        <div class="admin-panel-header">
+
+            <div>
+                <span class="admin-label">REGISTERED MEMBERS</span>
+                <h2>User Directory</h2>
+            </div>
+
+            <span id="userCount" class="admin-count">
+                0 Users
+            </span>
+
+        </div>
+
+
+        <div class="admin-search">
+
+            <input
+                type="text"
+                id="userSearch"
+                placeholder="Search by name or email..."
+            >
+
+        </div>
+
+
+        <div id="adminUserList">
+
+            <div class="admin-loading">
+                Loading registered users...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

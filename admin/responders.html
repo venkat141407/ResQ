@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responders | ResQ Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="admin-nav">
+
+    <div class="admin-logo">
+        🚨 ResQ <span>ADMIN</span>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="emergencies.html">Emergencies</a>
+        <a href="responders.html" class="active">Responders</a>
+        <a href="users.html">Users</a>
+        <a href="analytics.html">Analytics</a>
+        <button id="adminLogout">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+
+        <div>
+            <span class="admin-label">RESPONDER MANAGEMENT</span>
+
+            <h1>
+                Responder <strong>Network</strong>
+            </h1>
+
+            <p>
+                Review and verify community responders before they can assist.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="admin-panel">
+
+        <div class="admin-panel-header">
+
+            <div>
+                <span class="admin-label">COMMUNITY RESPONDERS</span>
+                <h2>Verification Center</h2>
+            </div>
+
+            <span id="responderCount" class="admin-count">
+                0 Responders
+            </span>
+
+        </div>
+
+
+        <div id="adminResponderList">
+
+            <div class="admin-loading">
+                Loading responder profiles...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

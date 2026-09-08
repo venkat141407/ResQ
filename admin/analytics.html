@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | ResQ Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="admin-nav">
+
+    <div class="admin-logo">
+        🚨 ResQ <span>ADMIN</span>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="emergencies.html">Emergencies</a>
+        <a href="responders.html">Responders</a>
+        <a href="users.html">Users</a>
+        <a href="analytics.html" class="active">Analytics</a>
+        <button id="adminLogout">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+
+        <div>
+            <span class="admin-label">NETWORK ANALYTICS</span>
+
+            <h1>
+                ResQ <strong>Insights</strong>
+            </h1>
+
+            <p>
+                Understand emergency activity and responder performance.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">👥</div>
+            <span>TOTAL USERS</span>
+            <strong id="analyticsUsers">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">🛡️</div>
+            <span>TOTAL RESPONDERS</span>
+            <strong id="analyticsResponders">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">🚨</div>
+            <span>TOTAL EMERGENCIES</span>
+            <strong id="analyticsEmergencies">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">✅</div>
+            <span>RESOLVED</span>
+            <strong id="analyticsResolved">—</strong>
+        </div>
+
+    </section>
+
+
+    <section class="admin-content-grid">
+
+        <div class="admin-panel">
+
+            <div class="admin-panel-header">
+
+                <div>
+                    <span class="admin-label">EMERGENCY BREAKDOWN</span>
+                    <h2>Emergency Types</h2>
+                </div>
+
+            </div>
+
+            <div id="emergencyTypeChart" class="analytics-list">
+                Loading analytics...
+            </div>
+
+        </div>
+
+
+        <div class="admin-panel">
+
+            <div class="admin-panel-header">
+
+                <div>
+                    <span class="admin-label">CASE STATUS</span>
+                    <h2>Resolution Overview</h2>
+                </div>
+
+            </div>
+
+            <div id="statusChart" class="analytics-list">
+                Loading statistics...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-panel analytics-note">
+
+        <span class="admin-label">RESQ INSIGHT</span>
+
+        <h2>Community response matters.</h2>
+
+        <p>
+            These analytics help administrators understand where
+            emergency assistance is most frequently requested and
+            how effectively the responder network is handling cases.
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

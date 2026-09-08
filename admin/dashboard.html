@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ResQ</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="admin-nav">
+
+    <div class="admin-logo">
+        🚨 ResQ <span>ADMIN</span>
+    </div>
+
+    <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="emergencies.html">Emergencies</a>
+        <a href="responders.html">Responders</a>
+        <a href="users.html">Users</a>
+        <a href="analytics.html">Analytics</a>
+        <button id="adminLogout">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+
+        <div>
+            <span class="admin-label">CONTROL CENTER</span>
+
+            <h1>
+                ResQ <strong>Overview</strong>
+            </h1>
+
+            <p>
+                Monitor emergency activity and manage the ResQ network.
+            </p>
+        </div>
+
+        <div class="admin-status">
+            <span></span>
+            System Operational
+        </div>
+
+    </section>
+
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">👥</div>
+            <span>TOTAL USERS</span>
+            <strong id="totalUsers">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">🛡️</div>
+            <span>RESPONDERS</span>
+            <strong id="totalResponders">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">🚨</div>
+            <span>EMERGENCIES</span>
+            <strong id="totalEmergencies">—</strong>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">🔴</div>
+            <span>ACTIVE CASES</span>
+            <strong id="activeEmergencies">—</strong>
+        </div>
+
+    </section>
+
+
+    <section class="admin-content-grid">
+
+        <div class="admin-panel">
+
+            <div class="admin-panel-header">
+                <div>
+                    <span class="admin-label">EMERGENCY ACTIVITY</span>
+                    <h2>Recent Emergencies</h2>
+                </div>
+
+                <a href="emergencies.html">
+                    View All →
+                </a>
+            </div>
+
+            <div id="recentEmergencies">
+
+                <div class="admin-loading">
+                    Loading emergency activity...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-panel">
+
+            <div class="admin-panel-header">
+                <div>
+                    <span class="admin-label">RESPONDER NETWORK</span>
+                    <h2>Verification</h2>
+                </div>
+
+                <a href="responders.html">
+                    Manage →
+                </a>
+            </div>
+
+            <div id="pendingResponders">
+
+                <div class="admin-loading">
+                    Loading responders...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-quick-actions">
+
+        <span class="admin-label">QUICK ACCESS</span>
+
+        <div class="quick-action-grid">
+
+            <a href="emergencies.html">
+                <span>🚨</span>
+                <strong>Emergency Management</strong>
+                <small>Review and monitor cases</small>
+            </a>
+
+            <a href="responders.html">
+                <span>🛡️</span>
+                <strong>Responder Verification</strong>
+                <small>Verify community responders</small>
+            </a>
+
+            <a href="users.html">
+                <span>👥</span>
+                <strong>User Management</strong>
+                <small>View registered users</small>
+            </a>
+
+            <a href="analytics.html">
+                <span>📊</span>
+                <strong>Analytics</strong>
+                <small>View network statistics</small>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

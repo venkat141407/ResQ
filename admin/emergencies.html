@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergencies | ResQ Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="admin-nav">
+
+    <div class="admin-logo">
+        🚨 ResQ <span>ADMIN</span>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="emergencies.html" class="active">Emergencies</a>
+        <a href="responders.html">Responders</a>
+        <a href="users.html">Users</a>
+        <a href="analytics.html">Analytics</a>
+        <button id="adminLogout">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+
+        <div>
+            <span class="admin-label">EMERGENCY MANAGEMENT</span>
+
+            <h1>
+                Emergency <strong>Cases</strong>
+            </h1>
+
+            <p>
+                Monitor reported emergencies across the ResQ network.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="admin-panel">
+
+        <div class="admin-panel-header">
+
+            <div>
+                <span class="admin-label">ALL CASES</span>
+                <h2>Emergency Reports</h2>
+            </div>
+
+            <span id="emergencyCount" class="admin-count">
+                0 Cases
+            </span>
+
+        </div>
+
+
+        <div class="admin-filter-bar">
+
+            <button class="admin-filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="admin-filter" data-filter="pending">
+                Pending
+            </button>
+
+            <button class="admin-filter" data-filter="matched">
+                Matched
+            </button>
+
+            <button class="admin-filter" data-filter="accepted">
+                Accepted
+            </button>
+
+            <button class="admin-filter" data-filter="in_progress">
+                In Progress
+            </button>
+
+            <button class="admin-filter" data-filter="resolved">
+                Resolved
+            </button>
+
+        </div>
+
+
+        <div id="adminEmergencyList">
+
+            <div class="admin-loading">
+                Loading emergency cases...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
